@@ -1,0 +1,30 @@
+import { ethers, network, run } from "hardhat";
+import config from "../config";
+import { constants } from "@openzeppelin/test-helpers";
+const abiAirDrop  = require("../abi/abiAirDrop.json");
+
+// địa chỉ Wrapped Ether (WETH) trên goerli
+const airDropadd = "0x7C7C71824d3320E3aDE0BaAF8d2Bb54417043849";
+const main = async () => {
+  // Get network name: hardhat, testnet or mainnet.
+  const { name } = network;
+
+  const [deployer] = await ethers.getSigners();
+
+  // console.log("IDO_ABI OK",IDO_ABI);
+  const airdrop = new ethers.Contract(airDropadd, abiAirDrop, deployer);
+  await airdrop.setInfoAirdrop(["1701439147",[["0x9C5A63faCDBB11B015ce2Ad176CF4665AF6037A1","4000000000000000000000"],["0xCE01Cb38251b6B5cfF5D5ba1A20119c06FB3AA77","2500000000000000000000"],["0x60105DE82f69cDa23e330e1B7d13b5782050877f","1500000000000000000000"],["0xd9B1a9c8A2809ee24656eF27969bD6AcDEcf525b","1000000000000000000000"],["0x70Deba871E98CCD4d14c3Bd1284F116BAEf2b271","500000000000000000000"],["0x506Faa756b2822862bb31832D6eB71A7aB6fdC9d","500000000000000000000"],["0x536570E6dc70553C8a652C9A87767bEfeC24d108","500000000000000000000"],["0xca787dD0d5555a058E04bE7c2F633f99f94fa234","400000000000000000000"],["0xA30372e216025c1FC84D05D5B1D465cfEd701DD1","400000000000000000000"],["0xF0894CA07a47a6493042E5C90dD4D0D16a299769","400000000000000000000"],["0x0a48a9c1614f5755fbf45eb44f77fec1c9e63d76","400000000000000000000"],["0x15cf2924049d2d4dc45bb525aafd561da7f796a3","300000000000000000000"],["0xC44501D7e5A11A385aff83A9630BbAA34563fE15","300000000000000000000"],["0x54516c0889684B7EFe998Eb6fC8A895b7937c8A5","300000000000000000000"],["0x31119e2CC69e007532A6e0CfdBD367BCD7fc40a0","300000000000000000000"]]]);
+  console.log("approving ");
+  console.log("approved OK");
+  // await idoF.createIDO("0x1dAab5922D2D9983166726fB678Be0798ef4148d",["0x25e546dd9aaab","0x2386f26fc10000","0x470de4df820000","0x2386f26fc10000","0x470de4df820000","0x2bb9c7ec013b2",6050,0,0,10000],["1695110343","1695113943","1695117543"],["0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f","0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D","0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f","0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6",-77280,-57840,"2197369742407909185249577052",[-887272,-887272],"other"],"0xc30Ffc988Dc9e4270e3E053ceA3Bec690B546810","QmTB4DZURWyVj3NDw9imz2xZKbztASLqwjy5K7Mf4GcSrH",false);
+  // console.log("createIDO OK");
+
+};
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => { 
+    console.error(error);
+    process.exit(1);
+
+  });

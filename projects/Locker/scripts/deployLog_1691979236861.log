@@ -1,0 +1,12 @@
+Deploying to network: [object Object]
+Deploying CbaseRewardLockerV2 
+====================== 
+CbaseRewardLockerV2: 0xD5AcC36E289f225E9c37c638D44b05ddD6A38208
+== START VERIFY: CbaseRewardLockerV2 == 
+NomicLabsHardhatPluginError: Trying to verify a contract in a network with chain id 84531, but the plugin doesn't recognize it as a supported chain.
+
+You can manually add support for it by following these instructions: https://hardhat.org/verify-custom-networks
+
+To see the list of supported networks, run this command:
+
+  npx hardhat verify --list-networks 

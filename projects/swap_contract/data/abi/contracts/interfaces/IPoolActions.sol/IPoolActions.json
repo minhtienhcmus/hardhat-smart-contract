@@ -1,0 +1,220 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "int24",
+        "name": "tickLower",
+        "type": "int24"
+      },
+      {
+        "internalType": "int24",
+        "name": "tickUpper",
+        "type": "int24"
+      },
+      {
+        "internalType": "uint128",
+        "name": "qty",
+        "type": "uint128"
+      }
+    ],
+    "name": "burn",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "qty0",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "qty1",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "feeGrowthInside",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "qty",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isLogicalBurn",
+        "type": "bool"
+      }
+    ],
+    "name": "burnRTokens",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "qty0",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "qty1",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "qty0",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "qty1",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "flash",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "int24",
+        "name": "tickLower",
+        "type": "int24"
+      },
+      {
+        "internalType": "int24",
+        "name": "tickUpper",
+        "type": "int24"
+      },
+      {
+        "internalType": "int24[2]",
+        "name": "ticksPrevious",
+        "type": "int24[2]"
+      },
+      {
+        "internalType": "uint128",
+        "name": "qty",
+        "type": "uint128"
+      },
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "mint",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "qty0",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "qty1",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "feeGrowthInside",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "int256",
+        "name": "swapQty",
+        "type": "int256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isToken0",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint160",
+        "name": "limitSqrtP",
+        "type": "uint160"
+      },
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "swap",
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "qty0",
+        "type": "int256"
+      },
+      {
+        "internalType": "int256",
+        "name": "qty1",
+        "type": "int256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint160",
+        "name": "initialSqrtP",
+        "type": "uint160"
+      }
+    ],
+    "name": "unlockPool",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "qty0",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "qty1",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

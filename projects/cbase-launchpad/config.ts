@@ -1,0 +1,27 @@
+export default {
+  ADMIN: {
+    // TODO: Change
+    mainnet: "0xb76dd205e9d8935C3f4195FD1B0DcCe3CdE818fA",
+    testnet: "0xcB8A5dFE06a4231156f7cF5600754cDc51371501",
+    base_goerli:"0xcB8A5dFE06a4231156f7cF5600754cDc51371501",
+    base:"0x31119e2CC69e007532A6e0CfdBD367BCD7fc40a0"
+  },
+  WETH:{
+    mainnet: "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+    testnet: "0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6",
+    base_goerli:"0x4200000000000000000000000000000000000006",
+    base:"0x4200000000000000000000000000000000000006"
+  },
+  FeeAmount:{
+    mainnet: "",
+    testnet: "10000000000000000",
+    base_goerli:"10000000000000000",
+    base:"100000000000000000"
+  },
+  basePositionManager:{
+    mainnet: "",
+    testnet: "0x1d6a881439Cdbdc515C25CA55dcCd08934540655",
+    base_goerli:"0x660944FbcB579008C281fc1555581FBf98e73392",
+    base:"0x1C205DA412935E6b07836E6A09Ff81dA6F057F66"
+  }
+};

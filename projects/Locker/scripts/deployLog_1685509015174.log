@@ -1,0 +1,12 @@
+Deploying to network: [object Object]
+Deploying OcarioRewardLockerV2 
+====================== 
+OcarioRewardLockerV2: 0x14306421cD5221E6A203Db23Ec2297B2dEB6942A
+== START VERIFY: OcarioRewardLockerV2Contract == 
+NomicLabsHardhatPluginError: Trying to verify a contract in a network with chain id 84531, but the plugin doesn't recognize it as a supported chain.
+
+You can manually add support for it by following these instructions: https://hardhat.org/verify-custom-networks
+
+To see the list of supported networks, run this command:
+
+  npx hardhat verify --list-networks 

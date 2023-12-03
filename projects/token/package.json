@@ -1,0 +1,30 @@
+{
+  "name": "token",
+  "description": "An auto-compounding system for CAKE tokens",
+  "main": "index.js",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy:goerli": "npx hardhat run --network goerli scripts/deploy.ts",
+    "deploy:polygon": "npx hardhat run --network polygon scripts/deploy.ts",
+    "deploy:mumbai": "npx hardhat run --network mumbai scripts/deploy.ts",
+    "deploy:bsc_testnet": "npx hardhat run --network bsc_testnet scripts/deploy.ts",
+    "deploy:base_goerli": "npx hardhat run --network base_goerli scripts/deploy.ts",
+    "deploy:mainnet": "npx hardhat run --network mainnet scripts/deploy.ts",
+    "test": "npx hardhat test",
+    "test:coverage": "npx hardhat coverage",
+    "test:size-contracts": "npx hardhat size-contracts"
+  },
+  "devDependencies": {
+    "@kyber.network/utils-sc": "^2.2.1",
+    "@nomiclabs/hardhat-etherscan": "*",
+    "@openzeppelin/contracts": "*"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-etherscan": "^3.1.2",
+    "@openzeppelin/contracts": "^3.1.2",
+    "@openzeppelin/contracts-upgradeable": "^4.8.0"
+  }
+}

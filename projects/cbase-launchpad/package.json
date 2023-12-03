@@ -1,0 +1,30 @@
+{
+  "name": "cbase-launchpad",
+  "description": "An auto-compounding system for CAKE tokens",
+  "main": "index.js",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy:testnet": "npx hardhat run --network testnet scripts/deploy.ts",
+    "createIDO:testnet": "npx hardhat run --network testnet scripts/test.ts",
+    "airdrop:testnet": "npx hardhat run --network testnet scripts/AirDrop.ts",
+    "airdrop:base_mainnet": "npx hardhat run --network base scripts/AirDrop.ts",
+    "deploy:base_goerli": "npx hardhat run --network base_goerli scripts/deploy.ts",
+    "deploy:base_mainnet": "npx hardhat run --network base scripts/deploy.ts",
+    "deploy:mainnet": "npx hardhat run --network mainnet scripts/deploy.ts",
+    "test": "npx hardhat test",
+    "test:coverage": "npx hardhat coverage",
+    "test:size-contracts": "npx hardhat size-contracts"
+  },
+  "devDependencies": {
+    "@kyber.network/utils-sc": "^2.2.1",
+    "@nomiclabs/hardhat-etherscan": "*"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-etherscan": "^3.1.2",
+    "@openzeppelin/contracts": "^4.4.0",
+    "@openzeppelin/contracts-upgradeable": "^4.8.0"
+  }
+}
